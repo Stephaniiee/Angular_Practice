@@ -1,25 +1,35 @@
 <div class="wrapper">
+
   <div class="presentation-side">
     <h1>Hallo</h1>
     <h2>Deutsch</h2>
   </div>
 
   <div class="authentication-side">
+
     <div class="button-wrapper">
-      <a class="signin">SignIn</a>
-      <a class="signup">SignUp</a>
+      <a class="signin" [ngClass]="{ 'active-tab': activeTab === 'login' }" (click)="setTab('login')">SignIn</a>
+      <a class="signup" [ngClass]="{ 'active-tab': activeTab === 'signup' }" (click)="setTab('signup')">SignUp</a>
     </div>
 
     <div class="authentication-wrapper">
-      <h2>Welcome back!</h2>
-      <div class="email">Email</div>
-      <div class="password">Password</div>
+
+      <app-login *ngIf="activeTab === 'login'"></app-login>
+      <app-signup *ngIf="activeTab === 'signup'"></app-signup>
+
+      <div class="button-wrapper">
+        <button type="submit" class="submit-button">
+         <svg class="feather feather-corner-down-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="15 10 20 15 15 20"/>
+          <path d="M4 4v7a4 4 0 0 0 4 4h12"/>
+         </svg>
+        </button>
+      </div>
+
     </div>
 
     <div class="image-wrapper">
       <img src="./assets/hallo.jpg" />
     </div>
-
   </div>
-
 </div>
