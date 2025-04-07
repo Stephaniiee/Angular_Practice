@@ -1,0 +1,15 @@
+{
+    "editor.tabSize": 4,
+    "editor.fontSize": 16,
+    "diffEditor.codeLens": true,
+    "editor.autoIndent": "advanced",
+    "editor.detectIndentation": true,
+    "html.format.indentInnerHtml": true,
+    "editor.insertSpaces": false,
+    "editor.foldingStrategy": "indentation",
+    "prettier.useTabs": true,
+    "prettier.bracketSameLine": true,
+    "prettier.tabWidth": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+}
